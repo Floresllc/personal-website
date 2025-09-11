@@ -184,13 +184,13 @@ export default function HomePage() {
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">About Dr. Israel Flores</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  I’m an educational researcher and consultant who brings a unique blend of academic and industry expertise to drive business goals through research-driven insights.
+                  I&apos;m an educational researcher and consultant who brings a unique blend of academic and industry expertise to drive business goals through research-driven insights.
                 </p>
                 <p>
-                  Before launching my consulting practice, I led learning design on various teams at Noggin by Nickelodeon. I worked with some of the most creative minds in the industry to develop early learning content for children ages 2–7 with the use of iconic properties like Dora the Explorer, Blue’s Clues, Peppa Pig, and Paw Patrol. My work focused on supporting English and Spanish literacy, math, STEM, and problem-solving skills through interactive media, caregiver-facing resources, and tools to extend digital experiences into the physical world. I've designed and executed dozens of formative and summative research evaluations for educational products and concepts, from picture books, linear content, and interactive games including those utilizing speech recognition software.
+                  Before launching my consulting practice, I led learning design on various teams at Noggin by Nickelodeon. I worked with some of the most creative minds in the industry to develop early learning content for children ages 2–7 with the use of iconic properties like Dora the Explorer, Blue&apos;s Clues, Peppa Pig, and Paw Patrol. My work focused on supporting English and Spanish literacy, math, STEM, and problem-solving skills through interactive media, caregiver-facing resources, and tools to extend digital experiences into the physical world. I&apos;ve designed and executed dozens of formative and summative research evaluations for educational products and concepts, from picture books, linear content, and interactive games including those utilizing speech recognition software.
                 </p>
                 <p>
-                  My lived experiences navigating bilingualism and multicultural contexts have had a profound impact on my academic and professional work. I bring a personal commitment to equity, inclusion, and representation in children’s media. When I’m not collaborating on kid's content, I enjoy video games, woodworking, and exploring the outdoors with my wife and our two dogs.
+                  My lived experiences navigating bilingualism and multicultural contexts have had a profound impact on my academic and professional work. I bring a personal commitment to equity, inclusion, and representation in children&apos;s media. When I&apos;m not collaborating on kid&apos;s content, I enjoy video games, woodworking, and exploring the outdoors with my wife and our two dogs.
                 </p>
               </div>
 
