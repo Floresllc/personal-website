@@ -640,24 +640,7 @@ const SampleWorkCarousel = () => {
               </div>
             </div>
             <div className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <Card className="text-center p-6 border-2 border-blue-200">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
-                  <div className="text-sm text-gray-600">Publications</div>
-                </Card>
-                <Card className="text-center p-6 border-2 border-green-200">
-                  <div className="text-3xl font-bold text-green-600 mb-2">25+</div>
-                  <div className="text-sm text-gray-600">Presentations</div>
-                </Card>
-                <Card className="text-center p-6 border-2 border-purple-200">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">5+</div>
-                  <div className="text-sm text-gray-600">Research Grants</div>
-                </Card>
-                <Card className="text-center p-6 border-2 border-orange-200">
-                  <div className="text-3xl font-bold text-orange-600 mb-2">10+</div>
-                  <div className="text-sm text-gray-600">Collaborations</div>
-                </Card>
-              </div>
+
               <Card className="border-2 border-gray-200">
                 <CardHeader>
                   <CardTitle className="text-lg">Research Focus Areas</CardTitle>
