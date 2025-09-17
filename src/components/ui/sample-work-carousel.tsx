@@ -9,8 +9,8 @@ import {
   ChevronRight,
   CheckCircle,
   BookOpen,
-  Users,
-  Target,
+  HandHeart,
+  Clipboard,
   GraduationCap,
   Play,
   Download,
@@ -148,8 +148,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
-                <Play className="w-8 h-8 text-white ml-1" />
+              <div
+                className={`${compact ? "w-12 h-12" : "w-20 h-20"} bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg`}
+              >
+                <Play className={`${compact ? "w-4 h-4" : "w-8 h-8"} text-white ml-1`} />
               </div>
               {title && <p className="text-gray-600 font-medium text-sm">{title}</p>}
               <p className="text-gray-500 text-xs mt-1">Click to play video</p>
@@ -222,7 +224,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfPath, previewPath, title, comp
             alt={`${title || "PDF"} preview`}
             width={400}
             height={300}
-            className="w-full h-full object-cover border-b border-gray-200"
+            className="w-full h-full object-contain border-b border-gray-200 bg-white"
           />
         </div>
         <div className="p-3 text-center">
@@ -277,7 +279,7 @@ const SampleWorkCarousel = () => {
     {
       id: 1,
       title: "High Quality Learning Experiences",
-      icon: <Target className="h-6 w-6" />,
+      icon: <BookOpen className="h-6 w-6" />,
       content: (
         <div className="h-full flex items-center">
           <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
@@ -295,7 +297,7 @@ const SampleWorkCarousel = () => {
                 </p>
                 <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
                   <p className="text-gray-700 text-lg">
-                    <strong>Featured:</strong> <em>Ruff, Ruff, Repairs</em> lets little builders play with literacy
+                    <strong>Featured:</strong> <em>Ruff, Ruff Repairs</em> lets little builders play with literacy
                     activities while interacting with Rubble and his family to repair buildings in Builder Cove.
                   </p>
                 </div>
@@ -334,17 +336,13 @@ const SampleWorkCarousel = () => {
     {
       id: 2,
       title: "Designing Experiences for Families",
-      icon: <Users className="h-6 w-6" />,
+      icon: <HandHeart className="h-6 w-6" />,
       content: (
         <div className="h-full flex items-center justify-center">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-4">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Designing Experiences for Families</h3>
-              <div className="w-16 h-1 bg-yellow-500 mx-auto mb-3"></div>
-              <p className="text-base text-gray-600 max-w-3xl mx-auto">
-                Creating caregiver resources that complement digital interactive content and support shared experiences.
-              </p>
-            </div>
+            <p className="text-base text-gray-600 max-w-3xl mx-auto text-center mb-6">
+              Creating caregiver resources that complement digital interactive content and support shared experiences.
+            </p>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Noggin Knows Books */}
               <div className="bg-gradient-to-br from-green-400 to-green-600 rounded-xl p-5 text-white shadow-xl">
@@ -366,7 +364,7 @@ const SampleWorkCarousel = () => {
               <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl p-5 text-white shadow-xl">
                 <div className="text-center mb-3">
                   <div className="inline-flex items-center justify-center w-10 h-10 bg-white/20 rounded-full mb-2">
-                    <Target className="h-5 w-5 text-white" />
+                    <Clipboard className="h-5 w-5 text-white" />
                   </div>
                   <h4 className="text-lg font-bold mb-1">Reading Guide</h4>
                   <h3 className="text-xl font-bold">Shared Techniques</h3>
@@ -377,6 +375,7 @@ const SampleWorkCarousel = () => {
                     previewPath="dialogic-reading-cover.png"
                     title="Download PDF Guide"
                     compact={true}
+                    aspectRatio="4/3"
                   />
                 </div>
                 <p className="text-white/90 text-center text-xs">
@@ -391,7 +390,7 @@ const SampleWorkCarousel = () => {
     {
       id: 3,
       title: "Impactful Formative Research",
-      icon: <BookOpen className="h-6 w-6" />,
+      icon: <Clipboard className="h-6 w-6" />,
       content: (
         <div className="h-full flex items-center">
           <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
@@ -410,12 +409,6 @@ const SampleWorkCarousel = () => {
                   I designed testing protocols, conducted 1-on-1 Zoom sessions with children & caregivers, and presented
                   findings with design recommendations.
                 </p>
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
-                  <p className="text-gray-700 text-lg">
-                    <strong>Featured:</strong> Noggin&apos;s award-winning Blue&apos;s Clues game brings players to
-                    Blue&apos;s world and teaches them about caring for animals!
-                  </p>
-                </div>
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
@@ -445,7 +438,7 @@ const SampleWorkCarousel = () => {
     {
       id: 4,
       title: "Creating for Belonging",
-      icon: <Users className="h-6 w-6" />,
+      icon: <HandHeart className="h-6 w-6" />,
       content: (
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-4 lg:p-6 h-full">
           <div className="max-w-5xl mx-auto h-full flex flex-col justify-center">
@@ -541,83 +534,18 @@ const SampleWorkCarousel = () => {
                   My areas of expertise include children&apos;s symbolic development, best practices in educational
                   media, and interactions between culture, language, and technology.
                 </p>
-                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                  <p className="text-gray-700">
-                    <strong>Research Areas:</strong> Early childhood education, educational technology, multicultural
-                    learning environments, and family engagement in digital learning.
-                  </p>
-                </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <h4 className="font-semibold text-gray-900">Academic Contributions:</h4>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => {
-                      const publicationsDiv = document.getElementById("publications-list")
-                      if (publicationsDiv) {
-                        publicationsDiv.style.display = publicationsDiv.style.display === "none" ? "block" : "none"
-                      }
-                    }}
-                    className="text-xs cursor-pointer"
+                  <a
+                    href="https://scholar.google.com/citations?user=dGPGphAAAAAJ&hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium transition-all disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 px-3 cursor-pointer"
                   >
                     View Publications
-                  </Button>
-                </div>
-                <div
-                  id="publications-list"
-                  style={{ display: "none" }}
-                  className="bg-gray-50 p-4 rounded-lg max-h-64 overflow-y-auto"
-                >
-                  <div className="space-y-2 text-xs text-gray-600">
-                    <p>
-                      • Hwang, J. K., Mancilla-Martinez, J., Flores, I., & McClain, J. B. (2022). The relationship among
-                      home language use, parental beliefs, and Spanish-speaking children&apos;s vocabulary.
-                      International journal of bilingual education and bilingualism, 25(4), 1175-1193.
-                    </p>
-                    <p>
-                      • McClain, J. B., Mancilla-Martinez, J., Flores, I., & Buckley, L. (2021). Translanguaging to
-                      support emergent bilingual students in English dominant preschools. Bilingual Research Journal,
-                      44(2), 158–173.
-                    </p>
-                    <p>
-                      • Russo Johnson, C., Flores, I., & Troseth, G. L. (2021). Do young children of the &quot;selfie
-                      generation&quot; understand digital photos as representations? Human Behavior and Emerging
-                      Technologies, 3(4), 512–524.
-                    </p>
-                    <p>
-                      • Troseth, G. L., Strouse, G. A., Flores, I., Stuckelman, Z. D., & Johnson, C. R. (2020). An
-                      enhanced eBook facilitates parent–child talk during shared reading by families of low
-                      socioeconomic status. Early childhood research quarterly, 50, 45–58.
-                    </p>
-                    <p>
-                      • Flores, I. (2020). The Role of Symbolic Experience in Learning to use Scale Models [PhD thesis].
-                      Vanderbilt University.
-                    </p>
-                    <p>
-                      • Hwang, J. K., Mancilla-Martinez, J., McClain, J. B., Oh, M. H., & Flores, I. (2020).
-                      Spanish-speaking English learners&apos; English language and literacy skills. Applied
-                      Psycholinguistics, 41(1), 1–24.
-                    </p>
-                    <p>
-                      • Rasmussen, E. E., Strouse, G. A., Colwell, M. J., et al. (2019). Promoting preschoolers&apos;
-                      emotional competence through prosocial TV and mobile app use. Media Psychology, 22(1), 1–22.
-                    </p>
-                    <p>
-                      • Troseth, G. L., Flores, I., & Stuckelman, Z. D. (2019). When representation becomes reality:
-                      Interactive digital media and symbolic development. Advances in child development and behavior,
-                      56, 65–108.
-                    </p>
-                    <p>
-                      • Flores, I. (2017). Language brokering during shared ebook reading [Masters Thesis]. Vanderbilt
-                      University.
-                    </p>
-                    <p>
-                      • Troseth, G. L., Mancilla-Martinez, J., & Flores, I. (2018). Bilingual Children: Active Language
-                      Learners as Language Brokers. Active Learning from Infancy to Childhood, 233–259.
-                    </p>
-                  </div>
+                  </a>
                 </div>
                 <ul className="space-y-2">
                   <li className="flex items-start">
@@ -640,7 +568,6 @@ const SampleWorkCarousel = () => {
               </div>
             </div>
             <div className="space-y-6">
-
               <Card className="border-2 border-gray-200">
                 <CardHeader>
                   <CardTitle className="text-lg">Research Focus Areas</CardTitle>
@@ -648,11 +575,13 @@ const SampleWorkCarousel = () => {
                 <CardContent>
                   <div className="space-y-2">
                     <Badge className="bg-blue-100 text-blue-800 mr-2 mb-2">Early Childhood Development</Badge>
-                    <Badge className="bg-green-100 text-green-800 mr-2 mb-2">Educational Technology</Badge>
-                    <Badge className="bg-purple-100 text-purple-800 mr-2 mb-2">Multicultural Education</Badge>
-                    <Badge className="bg-orange-100 text-orange-800 mr-2 mb-2">Family Engagement</Badge>
-                    <Badge className="bg-pink-100 text-pink-800 mr-2 mb-2">Digital Learning</Badge>
-                    <Badge className="bg-indigo-100 text-indigo-800 mr-2 mb-2">Child Development</Badge>
+                    <Badge className="bg-green-100 text-green-800 mr-2 mb-2">Cognitive Development</Badge>
+                    <Badge className="bg-purple-100 text-purple-800 mr-2 mb-2">Developmental Psychology</Badge>
+                    <Badge className="bg-orange-100 text-orange-800 mr-2 mb-2">Educational Media & Technology</Badge>
+                    <Badge className="bg-pink-100 text-pink-800 mr-2 mb-2">Family Engagement</Badge>
+                    <Badge className="bg-indigo-100 text-indigo-800 mr-2 mb-2">Digital Learning</Badge>
+                    <Badge className="bg-red-100 text-red-800 mr-2 mb-2">Multicultural Education</Badge>
+                    <Badge className="bg-yellow-100 text-yellow-800 mr-2 mb-2">Literacy Development</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -687,7 +616,7 @@ const SampleWorkCarousel = () => {
             onClick={prevSlide}
             className="bg-white shadow-lg hover:bg-gray-50 border-gray-200 cursor-pointer"
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-8 w-8" />
           </Button>
         </div>
         <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10">
@@ -697,7 +626,7 @@ const SampleWorkCarousel = () => {
             onClick={nextSlide}
             className="bg-white shadow-lg hover:bg-gray-50 border-gray-200 cursor-pointer"
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-8 w-8" />
           </Button>
         </div>
         {/* Content */}
@@ -738,8 +667,8 @@ const SampleWorkCarousel = () => {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`p-3 rounded-lg text-sm font-medium transition-all duration-200 border-2 cursor-pointer ${index === currentSlide
-                  ? "bg-yellow-500 text-white border-yellow-500 shadow-lg transform scale-105"
-                  : "bg-white text-gray-700 border-gray-200 hover:border-yellow-300 hover:bg-yellow-50 shadow-sm"
+                    ? "bg-yellow-500 text-white border-yellow-500 shadow-lg transform scale-105"
+                    : "bg-white text-gray-700 border-gray-200 hover:border-yellow-300 hover:bg-yellow-50 shadow-sm"
                   }`}
               >
                 <div className="flex items-center space-x-3">

@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Linkedin, CheckCircle, Users, BookOpen, Target, ArrowRight } from "lucide-react"
+import { Mail, Linkedin, CheckCircle, Users, Video, ArrowRight, Gamepad2, Lightbulb } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -121,7 +121,12 @@ export default function HomePage() {
 
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  Hi, I’m Dr. Israel Flores. I’m a researcher and consultant with over a decade of experience in developmental research, children’s media, and early learning. I specialize in mixed-methods research, learner-centered design, and culturally responsive insights to support the creation of educational content and digital products for kids and families. Whether partnering with media companies, nonprofits, or edtech teams, I help transform research into strategies and insights that guide content development and support meaningful, inclusive experiences.
+                  Hi, I&apos;m Dr. Israel Flores. I&apos;m a researcher and consultant with over a decade of experience
+                  in developmental research, children&apos;s media, and early learning. I specialize in mixed-methods
+                  research, learner-centered design, and culturally responsive insights to support the creation of
+                  educational content and digital products for kids and families. Whether partnering with media
+                  companies, nonprofits, or edtech teams, I help transform research into strategies and insights that
+                  guide content development and support meaningful, inclusive experiences.
                 </p>
               </div>
 
@@ -167,9 +172,6 @@ export default function HomePage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-yellow-500 text-gray-900 p-4 rounded-full shadow-lg">
-                  <BookOpen className="h-8 w-8" />
-                </div>
               </div>
             </div>
           </div>
@@ -184,13 +186,24 @@ export default function HomePage() {
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">About Dr. Israel Flores</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  I&apos;m an educational researcher and consultant who brings a unique blend of academic and industry expertise to drive business goals through research-driven insights.
+                  I&apos;m an educational researcher and consultant who brings a unique blend of academic and industry
+                  expertise to drive business goals through research-driven insights.
                 </p>
                 <p>
-                  Before launching my consulting practice, I led learning design on various teams at Noggin by Nickelodeon. I worked with some of the most creative minds in the industry to develop early learning content for children ages 2–7 with the use of iconic properties like Dora the Explorer, Blue&apos;s Clues, Peppa Pig, and Paw Patrol. My work focused on supporting English and Spanish literacy, math, STEM, and problem-solving skills through interactive media, caregiver-facing resources, and tools to extend digital experiences into the physical world. I&apos;ve designed and executed dozens of formative and summative research evaluations for educational products and concepts, from picture books, linear content, and interactive games including those utilizing speech recognition software.
+                  Before launching my consulting practice, I led learning design on various teams at Noggin by
+                  Nickelodeon. I worked with some of the most creative minds in the industry to develop early learning
+                  content for children ages 2–7 with the use of iconic properties like Dora the Explorer, Blue&apos;s
+                  Clues, Peppa Pig, and Paw Patrol. My work focused on supporting English and Spanish literacy, math,
+                  STEM, and problem-solving skills through interactive media, caregiver-facing resources, and tools to
+                  extend digital experiences into the physical world. I&apos;ve designed and executed dozens of
+                  formative and summative research evaluations for educational products and concepts, from picture
+                  books, linear content, and interactive games including those utilizing speech recognition software.
                 </p>
                 <p>
-                  My lived experiences navigating bilingualism and multicultural contexts have had a profound impact on my academic and professional work. I bring a personal commitment to equity, inclusion, and representation in children&apos;s media. When I&apos;m not collaborating on kid&apos;s content, I enjoy video games, woodworking, and exploring the outdoors with my wife and our two dogs.
+                  My lived experiences navigating bilingualism and multicultural contexts have had a profound impact on
+                  my academic and professional work. I bring a personal commitment to equity, inclusion, and
+                  representation in children&apos;s media. When I&apos;m not collaborating on kid&apos;s content, I
+                  enjoy video games, woodworking, and exploring the outdoors with my wife and our two dogs.
                 </p>
               </div>
 
@@ -270,7 +283,7 @@ export default function HomePage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                  <Target className="h-6 w-6 text-yellow-600" />
+                  <Video className="h-6 w-6 text-yellow-600" />
                 </div>
                 <CardTitle>Content Development Support</CardTitle>
                 <CardDescription>
@@ -303,7 +316,7 @@ export default function HomePage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-yellow-600" />
+                  <Gamepad2 className="h-6 w-6 text-yellow-600" />
                 </div>
                 <CardTitle>Playtesting & Product Validation</CardTitle>
                 <CardDescription>
@@ -335,7 +348,7 @@ export default function HomePage() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                  <BookOpen className="h-6 w-6 text-yellow-600" />
+                  <Lightbulb className="h-6 w-6 text-yellow-600" />
                 </div>
                 <CardTitle>Consumer Insights Research</CardTitle>
                 <CardDescription>
@@ -396,6 +409,66 @@ export default function HomePage() {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Clients Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Trusted by Leading Organizations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Collaborating with industry leaders to create impactful educational experiences for children and families.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow w-full h-24">
+              <Image
+                src="/logos/sesame-workshop.jpg"
+                alt="Sesame Workshop"
+                width={150}
+                height={60}
+                className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow w-full h-24">
+              <Image
+                src="/logos/nickelodeon.png"
+                alt="Nickelodeon"
+                width={120}
+                height={60}
+                className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow w-full h-24">
+              <Image
+                src="/logos/age-of-learning.png"
+                alt="Age of Learning"
+                width={140}
+                height={60}
+                className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow w-full h-24">
+              <Image
+                src="/logos/tinysouls.png"
+                alt="TinySOULS"
+                width={130}
+                height={60}
+                className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow w-full h-24 col-span-2 md:col-span-1">
+              <Image
+                src="/logos/ad-astra.png"
+                alt="Ad Astra"
+                width={80}
+                height={60}
+                className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
           </div>
         </div>
       </section>
